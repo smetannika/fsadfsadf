@@ -8,9 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: rustak-mod
     steps:
       - uses: actions/checkout@v4
 
@@ -23,10 +20,17 @@ jobs:
         with:
           gradle-version: 7.3.3
 
+      - name: Find project folder
+        id: p
+        run: |
+          F=$(find . -name settings.gradle -not -path "./.git/*" | head -n 1)
+          if [ -z "$F" ]; then echo "settings.gradle not found"; exit 1; fi
+          echo "dir=$(dirname "$F")" >> "$GITHUB_OUTPUT"
+
       - name: Build mod
-        run: gradle build --no-daemon
+        run: gradle build --no-daemon -p "${{ steps.p.outputs.dir }}"
 
       - uses: actions/upload-artifact@v4
         with:
           name: rustak-ak47
-          path: rustak-mod/build/libs/*.jar
+          path: ${{ steps.p.outputs.dir }}/build/libs/*.jar
