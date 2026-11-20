@@ -1,0 +1,7 @@
+{
+ "item.rustak.ak47": "AK-47",
+ "item.rustak.ammo_762": "7.62x39 Ammo",
+ "subtitles.rustak.ak47_shot": "AK-47 fires",
+ "message.rustak.no_ammo": "Out of ammo",
+ "message.rustak.ammo": "Ammo: %s"
+}

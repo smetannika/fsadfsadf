@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "rustak",
+  "version": "${version}",
+  "name": "Rust AK-47",
+  "description": "АК-47 в стиле Rust: автоматическая стрельба, свой звук, руки от первого лица и патроны 7.62.",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.rustak.RustAkMod"],
+    "client": ["com.example.rustak.client.RustAkClient"]
+  },
+  "mixins": ["rustak.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric": "*",
+    "minecraft": "1.16.x",
+    "java": ">=8"
+  }
+}

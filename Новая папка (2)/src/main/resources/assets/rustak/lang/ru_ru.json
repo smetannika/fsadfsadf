@@ -1,0 +1,7 @@
+{
+ "item.rustak.ak47": "АК-47",
+ "item.rustak.ammo_762": "Патроны 7.62x39",
+ "subtitles.rustak.ak47_shot": "Выстрел из АК-47",
+ "message.rustak.no_ammo": "Нет патронов",
+ "message.rustak.ammo": "Патроны: %s"
+}

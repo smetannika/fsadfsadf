@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "com.example.rustak.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "client": ["HeldItemRendererMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

@@ -1,0 +1,10 @@
+{
+  "ak47_shot": {
+    "subtitle": "subtitles.rustak.ak47_shot",
+    "sounds": [
+      "rustak:ak47_shot1",
+      "rustak:ak47_shot2",
+      "rustak:ak47_shot3"
+    ]
+  }
+}
